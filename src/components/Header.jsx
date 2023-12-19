@@ -80,7 +80,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </header>
+      </header>    
       <header className="header-bottom py-3">
         <div className="container-xxl">
           <div className="row">
