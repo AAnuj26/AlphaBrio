@@ -12,8 +12,9 @@ const BlogCard = () => {
           <p className="date"> 1 Dec, 2023</p>
           <h5 className="title"> A beautiful sunday morning renaissance</h5>
           <p className="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, unde. Magnam possimus necessitatibus nulla, voluptatum rem 
-            </p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, unde.
+            Magnam possimus necessitatibus nulla, voluptatum rem
+          </p>
           <Link to="" className="button">
             Read More
           </Link>

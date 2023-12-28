@@ -80,7 +80,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </header>    
+      </header>
       <header className="header-bottom py-3">
         <div className="container-xxl">
           <div className="row">
@@ -96,7 +96,9 @@ const Header = () => {
                       aria-expanded="false"
                     >
                       <img src="images/menu.svg" alt="menu" />
-                     <span className="me-5 d-inline-block">Shop Categories</span> 
+                      <span className="me-5 d-inline-block">
+                        Shop Categories
+                      </span>
                     </button>
                     <ul
                       className="dropdown-menu"
