@@ -5,7 +5,7 @@ import { BsSearch } from "react-icons/bs";
 const Header = () => {
   return (
     <>
-      <header className="header-top-strip py-3">
+      <header className="header-top-strip py-3 ">
         <div className="container-xxl">
           <div className="row">
             <div className="col-6">
@@ -80,7 +80,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </header>    
+      </header>
       <header className="header-bottom py-3">
         <div className="container-xxl">
           <div className="row">
@@ -96,7 +96,9 @@ const Header = () => {
                       aria-expanded="false"
                     >
                       <img src="images/menu.svg" alt="menu" />
-                     <span className="me-5 d-inline-block">Shop Categories</span> 
+                      <span className="me-5 d-inline-block">
+                        Shop Categories
+                      </span>
                     </button>
                     <ul
                       className="dropdown-menu"
@@ -123,7 +125,7 @@ const Header = () => {
                 <div className="menu-links">
                   <div className="d-flex align-items-center gap-15">
                     <NavLink to="/">Home</NavLink>
-                    <NavLink to="/">Out Store</NavLink>
+                    <NavLink to="/store">Out Store</NavLink>
                     <NavLink to="/">blogs</NavLink>
                     <NavLink to="/contact">Contact</NavLink>
                   </div>
