@@ -522,3 +522,9 @@ footer .input-group-text {
   color: var(--color-777777);
 }
 /* Contact Page ends here */
+
+.compare-product-card {
+  padding: 20px 15px;
+  background-color: white;
+  border-radius: 10px;
+}
