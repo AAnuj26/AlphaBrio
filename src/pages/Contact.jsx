@@ -1,4 +1,3 @@
-import React from "react";
 import Meta from "../components/Meta";
 import BreadCrumb from "../components/BreadCrumb";
 import { FaHome } from "react-icons/fa";
