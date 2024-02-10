@@ -11,12 +11,23 @@ const CompareProduct = () => {
           <div className="row">
             <div className="col-3">
               <div className="compare-product-card position-relative">
+                <img
+                  src="images/cross.svg"
+                  alt="cross"
+                  className="position-absolute cross img-fluid"
+                />
                 <div className="product-card-image">
                   <img
                     src="images/watch.jpg"
                     alt="watch"
                     className="img-fluid"
                   />
+                </div>
+                <div className="compare-product-details">
+                  <h5 className="title">
+                    Honor T1 7.0 1 GB RAM 8 GB ROM 7 Inch With Wi-Fi+4G Tablet
+                  </h5>
+                  <h6 className="price">₹10000</h6>
                 </div>
               </div>
             </div>
