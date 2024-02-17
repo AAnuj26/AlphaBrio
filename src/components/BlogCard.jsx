@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const BlogCard = () => {
@@ -14,7 +13,7 @@ const BlogCard = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, unde.
           Magnam possimus necessitatibus nulla, voluptatum rem
         </p>
-        <Link to="" className="button">
+        <Link to="/blog/:id" className="button">
           Read More
         </Link>
       </div>
