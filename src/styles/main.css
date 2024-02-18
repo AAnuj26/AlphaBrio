@@ -283,8 +283,25 @@ footer .input-group-text {
   color: var(--color-777777);
 }
 
-.single-blog-card {
+.single-blog-card a {
+  font-size: 18px;
+  color: var(--color-777777);
+  margin-bottom: 20px;
 }
+
+.single-blog-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-1c1c1b);
+}
+
+.single-blog-card p {
+  font-size: 14px;
+  color: var(--color-777777);
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
 /* blog card end */
 
 /* product card start */
