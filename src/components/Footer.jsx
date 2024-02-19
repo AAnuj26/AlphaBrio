@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { BsLinkedin, BsGithub, BsYoutube, BsInstagram } from "react-icons/bs";
 const Footer = () => {
@@ -71,11 +70,24 @@ const Footer = () => {
             <div className="col-3">
               <h4 className="mb-4">Information</h4>
               <div className="footer-links d-flex flex-column">
-                <Link className="text-white py-2 mb-1">Privacy Policy</Link>
-                <Link className="text-white py-2 mb-1">Refund Policy</Link>
-                <Link className="text-white py-2 mb-1">Shipping Policy</Link>
-                <Link className="text-white py-2 mb-1">Terms & Conditions</Link>
-                <Link className="text-white py-2 mb-1">Blogs</Link>
+                <Link to={"privacy-policy"} className="text-white py-2 mb-1">
+                  Privacy Policy
+                </Link>
+                <Link to={"refund-policy"} className="text-white py-2 mb-1">
+                  Refund Policy
+                </Link>
+                <Link to={"shipping-policy"} className="text-white py-2 mb-1">
+                  Shipping Policy
+                </Link>
+                <Link
+                  to={"terms-and-conditions"}
+                  className="text-white py-2 mb-1"
+                >
+                  Terms & Conditions
+                </Link>
+                <Link to={"blogs"} className="text-white py-2 mb-1">
+                  Blogs
+                </Link>
               </div>
             </div>
             <div className="col-3">
@@ -84,7 +96,9 @@ const Footer = () => {
               <div className="footer-links d-flex flex-column">
                 <Link className="text-white py-2 mb-1">About Us</Link>
                 <Link className="text-white py-2 mb-1">Faq</Link>
-                <Link className="text-white py-2 mb-1">Contact</Link>
+                <Link to={"contact"} className="text-white py-2 mb-1">
+                  Contact
+                </Link>
               </div>
             </div>
             <div className="col-2">
