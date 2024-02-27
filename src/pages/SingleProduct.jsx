@@ -2,8 +2,11 @@ import Meta from "../components/Meta";
 import BreadCrumb from "../components/BreadCrumb";
 import ProductCard from "../components/ProductCard";
 import ReactStars from "react-rating-stars-component";
+import { useState } from "react";
 
 const SingleProduct = () => {
+  const [orderedProduct, setOrderedProduct] = useState(true);
+
   return (
     <>
       <Meta title={"Product Name"} />
@@ -53,7 +56,14 @@ const SingleProduct = () => {
                     <p>Based on 2 Reviews</p>
                   </div>
                 </div>
-                <div></div>
+                {orderedProduct ? (
+                  <div>
+                    <a className="text-dark text-decoration-underline" href="">
+                      {" "}
+                      Write a Review
+                    </a>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
