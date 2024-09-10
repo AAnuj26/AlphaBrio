@@ -6,14 +6,14 @@ const Colors = () => {
         <li></li>
         <li></li>
         <li></li>
+        {/* <li></li>
         <li></li>
         <li></li>
         <li></li>
         <li></li>
         <li></li>
         <li></li>
-        <li></li>
-        <li></li>
+        <li></li> */}
       </ul>
     </>
   );

@@ -2,10 +2,35 @@ import Meta from "../components/Meta";
 import BreadCrumb from "../components/BreadCrumb";
 import ProductCard from "../components/ProductCard";
 import ReactStars from "react-rating-stars-component";
-import { useState } from "react";
+import React, { useState } from "react";
+// import ReactImageZoom from "react-image-zoom";
+// import Zoom from "react-medium-image-zoom";
+// import "react-medium-image-zoom/dist/styles.css";
+// import { EasyZoomOnHover } from "easy-magnify";
+// import ReactImageZoom from "react-image-zoom";
+import InnerImageZoom from "react-inner-image-zoom";
+import "react-inner-image-zoom/lib/InnerImageZoom/styles.min.css";
+import Colors from "../components/Colors";
+import { Link } from "react-router-dom";
+import { IoIosGitCompare } from "react-icons/io";
+import { IoBagHandleOutline } from "react-icons/io5";
 
 const SingleProduct = () => {
   const [orderedProduct, setOrderedProduct] = useState(true);
+
+  const copyToClipboard = (text) => {
+    // navigator.clipboard.writeText("https://www.google.com");
+    // var textField = document.createElement("textarea");
+    // textField.innerText = text;
+    // document.body.appendChild(textField);
+    // textField.select();
+    // document.execCommand("copy");
+    // textField.remove();
+    navigator.clipboard.writeText(text);
+  };
+
+  const imageUrl =
+    "https://images.pexels.com/photos/125779/pexels-photo-125779.jpeg";
 
   return (
     <>
@@ -13,9 +38,187 @@ const SingleProduct = () => {
       <BreadCrumb title={"Product Name"} />
       <div className="main-product-wrapper  py-5 home-wrapper-2">
         <div className="container-xxl">
-          <div className="row">
+          <div
+            className="row"
+            // style={{
+            //   backgroundColor: "white",
+            // }}
+          >
             <div className="col-6">
-              <div className="col-6"></div>
+              <div className="main-product-image">
+                <div>
+                  <InnerImageZoom
+                    src={imageUrl}
+                    zoomSrc={imageUrl}
+                    zoomType="hover"
+                    zoomPreload={true}
+                    height={700}
+                  />
+                </div>
+              </div>
+              <div className="other-product-images d-flex flex-wrap gap-15">
+                <div>
+                  <img
+                    src="../../public/images/watch.jpg"
+                    alt=""
+                    className="img-fluid"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="../../public/images/watch.jpg"
+                    alt=""
+                    className="img-fluid"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="../../public/images/watch.jpg"
+                    alt=""
+                    className="img-fluid"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="../../public/images/watch.jpg"
+                    alt=""
+                    className="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="col-6">
+              <div className="main-product-details">
+                <div className="border-bottom">
+                  <h3 className="title">
+                    Kids Headphones Bulk 10 Pack Multi Colored for Students
+                  </h3>
+                </div>
+                <div className="border-bottom py-3">
+                  <p className="price">₹ 1000</p>
+                  <div className="d-flex align-items-center gap-10">
+                    <ReactStars
+                      count={5}
+                      size={24}
+                      value={4}
+                      edit={false}
+                      activeColor="#ffd700"
+                    />
+                    <p className="mb-0 t-review"> (2 Reviews)</p>
+                  </div>
+                  <a href="#review" className="review-btn">
+                    Write a Review
+                  </a>
+                </div>
+                <div className="border-bottom py-3">
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product-heading">Type :</h3>{" "}
+                    <p className="product-data">Watch</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product-heading">Brand :</h3>{" "}
+                    <p className="product-data">Titan</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product-heading">Category :</h3>{" "}
+                    <p className="product-data">Watch</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product-heading">Tags :</h3>{" "}
+                    <p className="product-data">Watch</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product-heading">Availability :</h3>{" "}
+                    <p className="product-data">In Stock</p>
+                  </div>
+                  <div className="d-flex gap-10 flex-column  mt-2 mb-3">
+                    <h3 className="product-heading">Size :</h3>
+                    <div className="d-flex flex-wrap gap-15">
+                      <span className="badge border border-1 bg-white text-dark border-secondary">
+                        S
+                      </span>
+                      <span className="badge border border-1 bg-white text-dark border-secondary">
+                        M
+                      </span>
+                      <span className="badge border border-1 bg-white text-dark border-secondary">
+                        L
+                      </span>
+                      <span className="badge border border-1 bg-white text-dark border-secondary">
+                        XL
+                      </span>
+                      <span className="badge border border-1 bg-white text-dark border-secondary">
+                        XXL
+                      </span>
+                    </div>
+                  </div>
+                  <div className="d-flex gap-10 flex-column mt-2 mb-3">
+                    <h3 className="product-heading">Color :</h3>{" "}
+                    <p className="product-data">
+                      <Colors />
+                    </p>
+                  </div>{" "}
+                  <div className="d-flex gap-15 flex-row mt-2 mb-3 align-items-center">
+                    <h3 className="product-heading">Quantity :</h3>{" "}
+                    <div className="">
+                      <input
+                        type="number"
+                        name=""
+                        min={1}
+                        max={10}
+                        defaultValue={1}
+                        className="form-control"
+                        style={{
+                          width: "50px",
+                        }}
+                        id=""
+                      />
+                    </div>
+                    <div>
+                      <div className="d-flex align-items-center gap-30 ms-5">
+                        <button className="button border-0" type="submit">
+                          Add To Cart
+                        </button>
+                        <Link to="/signup" className="button signup">
+                          Buy It Now
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="d-flex align-items-center gap-15">
+                    <div>
+                      <a href="">
+                        <IoIosGitCompare className="me-2 fs-5" />
+                        Add To Compare
+                      </a>
+                    </div>
+                    <div className="d-flex align-items-center">
+                      <a href="">
+                        {" "}
+                        <IoBagHandleOutline className="me-2 fs-5" />
+                        Add To Wishlist
+                      </a>
+                    </div>
+                  </div>
+                  <div className="d-flex align-items-center my-2">
+                    <h3 className="product-heading">Shipping & Returns :</h3>
+
+                    <p className="product-data ms-2">
+                      Free Shipping on all orders over ₹ 1000 <br />
+                      we ship all over the world
+                    </p>
+                  </div>
+                  <div className="d-flex align-items-center my-2">
+                    <h3 className="product-heading">Share :</h3>
+                    <a
+                      href="javascript:void(0)"
+                      onClick={() => copyToClipboard(window.location.href)}
+                      className="ms-2"
+                    >
+                      {window.location.href}
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -42,7 +245,7 @@ const SingleProduct = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
-              <h3>Reviews</h3>
+              <h3 id="review">Reviews</h3>
               <div className="review-inner-wrapper ">
                 <div className="review-head d-flex justify-content-between align-items-end">
                   <div>
