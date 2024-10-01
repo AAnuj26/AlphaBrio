@@ -14,18 +14,12 @@ import Colors from "../components/Colors";
 import { Link } from "react-router-dom";
 import { IoIosGitCompare } from "react-icons/io";
 import { IoBagHandleOutline } from "react-icons/io5";
+import watch from "/images/watch.jpg";
 
 const SingleProduct = () => {
   const [orderedProduct, setOrderedProduct] = useState(true);
 
   const copyToClipboard = (text) => {
-    // navigator.clipboard.writeText("https://www.google.com");
-    // var textField = document.createElement("textarea");
-    // textField.innerText = text;
-    // document.body.appendChild(textField);
-    // textField.select();
-    // document.execCommand("copy");
-    // textField.remove();
     navigator.clipboard.writeText(text);
   };
 
@@ -58,32 +52,16 @@ const SingleProduct = () => {
               </div>
               <div className="other-product-images d-flex flex-wrap gap-15">
                 <div>
-                  <img
-                    src="../../public/images/watch.jpg"
-                    alt=""
-                    className="img-fluid"
-                  />
+                  <img src={watch} alt="" className="img-fluid" />
                 </div>
                 <div>
-                  <img
-                    src="../../public/images/watch.jpg"
-                    alt=""
-                    className="img-fluid"
-                  />
+                  <img src={watch} alt="" className="img-fluid" />
                 </div>
                 <div>
-                  <img
-                    src="../../public/images/watch.jpg"
-                    alt=""
-                    className="img-fluid"
-                  />
+                  <img src={watch} alt="" className="img-fluid" />
                 </div>
                 <div>
-                  <img
-                    src="../../public/images/watch.jpg"
-                    alt=""
-                    className="img-fluid"
-                  />
+                  <img src={watch} alt="" className="img-fluid" />
                 </div>
               </div>
             </div>

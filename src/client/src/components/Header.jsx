@@ -1,5 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
+import menu from "../../public/images/menu.svg";
 
 const Header = () => {
   return (
@@ -100,7 +101,7 @@ const Header = () => {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      <img src="images/menu.svg" alt="menu" />
+                      <img src={menu} alt="menu" />
                       <span className="me-5 d-inline-block">
                         Shop Categories
                       </span>
